@@ -1,0 +1,75 @@
+.form {
+  display: grid;
+  gap: 22px;
+  max-width: 650px;
+  margin: 40px auto;
+
+  label {
+    display: grid;
+    gap: 8px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font: inherit;
+    outline: none;
+    background: #fff;
+
+    &:focus {
+      border-color: #16845b;
+      box-shadow: 0 0 0 3px rgba(22, 132, 91, 0.1);
+    }
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  button {
+    padding: 14px 22px;
+    border: none;
+    border-radius: 8px;
+    background: #16845b;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+      background: #116b49;
+    }
+  }
+
+  button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+  }
+}
+
+.success {
+  color: #16845b;
+  background: #eaf7f0;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.error {
+  color: #c62828;
+  background: #fcecec;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

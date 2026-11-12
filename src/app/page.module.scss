@@ -1,0 +1,270 @@
+/* src/app/page.module.scss */
+
+.hero {
+  padding-block: 76px;
+  background:
+    radial-gradient(circle at 85% 20%, #d9eee5 0, transparent 32%),
+    linear-gradient(135deg, #f4f8f5, #ffffff);
+}
+
+.heroContent {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 56px;
+}
+
+.heroText {
+  h1 {
+    max-width: 650px;
+    margin-top: 18px;
+    font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.065em;
+  }
+
+  > p {
+    max-width: 520px;
+    margin-top: 22px;
+    color: var(--color-muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+}
+
+.highlight {
+  color: var(--color-primary);
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 30px;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 20px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+}
+
+.primaryButton {
+  background: var(--color-primary);
+  color: white;
+
+  &:hover {
+    background: var(--color-primary-dark);
+  }
+}
+
+.secondaryButton {
+  border: 1px solid var(--color-border);
+  background: white;
+}
+
+.heroVisual {
+  position: relative;
+  min-height: 370px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 28px;
+  background: linear-gradient(145deg, #173e32, #236c53);
+  color: white;
+}
+
+.visualContent {
+  width: 85%;
+  text-align: center;
+
+  > p {
+    color: #c9e6d8;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin-top: 10px;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    line-height: 1.15;
+  }
+}
+
+.gadgetGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.gadget {
+  display: grid;
+  min-height: 100px;
+  place-items: center;
+  padding: 12px 5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+
+  span:first-child {
+    font-size: 2rem;
+  }
+
+  span:last-child {
+    margin-top: 5px;
+    color: #e1f0e8;
+    font-size: 0.75rem;
+  }
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.categoryCard {
+  padding: 24px 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: white;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-primary);
+  }
+
+  > span {
+    font-size: 2rem;
+  }
+
+  h3 {
+    margin-top: 14px;
+    font-size: 1rem;
+  }
+
+  p {
+    margin-top: 6px;
+    color: var(--color-muted);
+    font-size: 0.85rem;
+  }
+}
+
+.featuredGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.articleCard {
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: white;
+}
+
+.articleVisual {
+  min-height: 170px;
+  display: grid;
+  place-items: center;
+  background: var(--color-surface);
+  font-size: 3.5rem;
+}
+
+.articleContent {
+  padding: 20px;
+
+  > span {
+    color: var(--color-primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    margin-top: 8px;
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+
+  p {
+    margin-top: 8px;
+    color: var(--color-muted);
+    font-size: 0.88rem;
+  }
+}
+
+.trustSection {
+  padding: 50px 0;
+  background: var(--color-surface);
+}
+
+.trustGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+
+  h3 {
+    margin-top: 10px;
+    font-size: 1.05rem;
+  }
+
+  p {
+    margin-top: 6px;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+  }
+}
+
+.trustIcon {
+  font-size: 1.8rem;
+}
+
+@media (max-width: 900px) {
+  .heroContent {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .heroVisual {
+    min-height: 300px;
+  }
+
+  .categoryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featuredGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding-block: 55px;
+  }
+
+  .heroText h1 {
+    font-size: 2.8rem;
+  }
+
+  .heroVisual {
+    min-height: 280px;
+  }
+
+  .featuredGrid,
+  .trustGrid {
+    grid-template-columns: 1fr;
+  }
+}
